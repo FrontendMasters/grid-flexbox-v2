@@ -1,2 +1,5 @@
-# fem-layout-2
- Version 2 of the Flexbox/Grid course at Frontend Masters.
+# Frontend Masters: CSS Grids and Flexbox in Responsive Web Design v2
+
+## Workshop Files
+
+Taught August 18-19, 2021, at Frontend Masters
