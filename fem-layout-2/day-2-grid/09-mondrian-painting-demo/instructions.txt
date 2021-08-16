@@ -1,0 +1,22 @@
+9-mondrian-painting-demo Instructions
+
+Jen will walk through an interactive demo in which you'll reconstruct a painting by Piet Mondrian in CSS Grid. Copy the painting as closely as possible, given what you know about CSS Grid.
+
+Note: You will not be 100% perfect -- the painting isn't 100% perfect! But you will be very close.
+
+9A: Line-based grid layout
+Begin: https://codepen.io/jen4web/pen/mdmagoP?editors=1100
+End: https://codepen.io/jen4web/pen/vYmvMwN?editors=1100
+
+9B: Line-based grid layout with span notation
+Begin: https://codepen.io/jen4web/pen/qBmLGqE
+End: https://codepen.io/jen4web/pen/VwbqObj?editors=1100 
+
+
+Grid will always try to lay out information from the upper left to the lower right (at least in left-to-right systems), with each grid item occupying one row and one column.
+
+If you want to override that distribution, you must provide directions. 
+
+In example 9A, we have called out the location of each element, row and column.
+
+In 9B, we reduce the number of declarations, using Grid's tendency to place most of our grid items correctly, and using our declarations to override only what's needed. 

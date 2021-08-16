@@ -1,0 +1,262 @@
+2-flexbox-grid Instructions
+
+PART 2A: DESKTOP ONLY SYSTEM
+
+Starting CodePen: 
+https://codepen.io/jen4web/pen/OJmEmKb?editors=1100
+
+Finished CodePen: 
+https://codepen.io/jen4web/pen/VwbxBja?editors=1100
+
+Next, we'll create a 4-column grid system.  
+
+We'll also write some code for reversing the rows and reordering boxes within a row.
+
+
+
+
+PART 2B: RESPONSIVE SYSTEM
+
+Now we'll add media queries to make our grid system mobile-first.
+
+Starting CodePen (continues from the 2A finished state):
+https://codepen.io/jen4web/pen/WNjyMev?editors=1100
+
+Finished CodePen:
+https://codepen.io/jen4web/pen/ZEKRrzL?editors=1100
+
+
+PART 2C: YOU TRY IT
+
+Use the starting CodePen to code the layout as described.
+
+Starting CodePen:
+https://codepen.io/jen4web/pen/BaRVXeE
+
+Finished CodePen:
+https://codepen.io/jen4web/pen/gOWjYBb
+
+
+MATH NOTES
+
+When approaching this problem, it's helpful to make the following adjustments.
+
+A. Make sure you are working with the border box model, not the content box model.
+
+Border vs content box explained: 
+https://frontendmasters.github.io/bootcamp/layout#box-model-types
+
+CSS to set the border box model - place at the top of your CSS file (or early in your CSS stack):
+
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+B. When constructing a grid of X columns, go through the following steps.
+
+    0. You'll need to go through these steps at EACH breakpoint and adjust flex-basis accordingly.
+
+    1. How many columns will you have at a maximum? In our example, it's 4 columns.
+
+    2. Draw a sketch with one box per column with a space in between. 
+
+    3. Consider the width of the gap you'd like. Use % as your width. In our example, we had 3 gaps, and we used 4% width for each gap.
+
+    4. 100% - (3 gaps * 4%) = 88% left over for our 4 boxes. 
+
+    5. 88% / 4 = 22% per box. Set the flex-basis to 22% for this size of box.
+
+    6. When combining boxes, figure the new box size over the columns and add in the gap(s).
+
+    | Box 1 |    | Box 2 |
+        22% + 4% +  22%  = 48%
+
+    | Box 1 |    | Box 2 |    | Box 3 |
+        22% + 4% +  22%  + 4% + 22% = 74%
+
+    7. Now write classes for the sizes you need.
+
+
+PRO TIP: It's possible to tighten up the CSS even further with CSS variables and calc(). I cover this in "Advanced CSS Layouts:"
+https://frontendmasters.com/courses/advanced-css-layouts/
+
+NOTE: There is a gap property in Flexbox as well: 
+https://css-tricks.com/gaps-gasp/
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/gap
+
+You will get slightly different results using this rather than the method described above. Here, the gap will be preserved longer and boxes will wrap to the next line sooner than they will without a specific gap declared. 
+
+You may combine both methods without difficulty.
+
+
+
+
+
+Part 2A added CSS:
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+ /* enforces a gap between boxes. You still have to do the math. See https://css-tricks.com/gaps-gasp/
+  gap: 4%; */
+}
+figure {
+  flex-basis: 22%;
+}
+.span2 {
+  flex-basis: 48%;
+}
+.span3 {
+  flex-basis: 74%;
+}
+.span4 {
+  flex-basis: 100%;
+}
+.reverse {
+  flex-flow: row-reverse wrap;
+}
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
+}
+.order-3 {
+  order: 3;
+}
+
+Part 2A added HTML:
+<!-- Row 1: One box per column -->
+<div class="row reverse">
+
+</div>
+
+<!-- Row 2: 2 boxes, each spanning 2 columns -->
+<div class="row">
+  <figure class="span2">
+    
+  </figure>
+  <figure class="span2">
+    
+  </figure>
+</div>
+
+<!-- Row 3: One box spans 3 columns, one box spans 1 column -->
+<div class="row">
+  <figure class="span3">
+    
+  </figure>
+  <figure>
+
+  </figure>
+</div>
+
+<!-- Row 4: One box spans 4 columns -->
+<div class="row">
+  <figure class="span4">
+    <div class="three"></div>
+  </figure>
+</div>
+
+<!-- Row 5: 3 boxes, 1-2-1 distribution -->
+<div class="row">
+  <figure class="order-3">
+  </figure>
+  <figure class="span2 order-1">
+  </figure>
+  <figure class="order-2">
+  </figure>
+</div>
+
+
+
+
+Part 2B added CSS:
+
+/* Remember what's outside the media query is for mobile devices. The fundamental row declaration doesn't change. */
+.row figure {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 600px) {
+  .row figure {
+    margin: 0;
+  }
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  figure,
+  .span2 {
+    flex-basis: 48%;
+  }
+  /* place .grow last - overrides previous declarations at this dimension */
+  .span3, .span4, .grow {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 1000px) {
+  /* place .grow first and set basis to auto - this allows later specific declarations to take effect */
+  .grow {
+    flex-basis: auto;
+  }
+  figure {
+    flex-basis: 22%;
+  }
+  .span2 {
+    flex-basis: 48%;
+  }
+  .span3 {
+    flex-basis: 74%;
+  }
+  .span4 {
+    flex-basis: 100%;
+  }
+
+}
+
+/* outside the MQ's since they apply at all dimensions */
+.reverse {
+  flex-flow: row-reverse wrap;
+}
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
+}
+.order-3 {
+  order: 3;
+}
+
+
+
+Part 2B added HTML:
+
+
+<!-- Row 3: One box spans 3 columns, one box spans 1 column -->
+<div class="row">
+  <figure class="span3">
+    
+  </figure>
+  <figure class="grow">
+
+  </figure>
+</div>
+
+
+<!-- Row 5: 3 boxes, 1-2-1 distribution -->
+<div class="row">
+  <figure class="order-3">
+  </figure>
+  <figure class="span2 order-1 grow">
+  </figure>
+  <figure class="order-2">
+  </figure>
+</div>

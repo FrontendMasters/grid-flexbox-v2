@@ -1,0 +1,21 @@
+11-fig-figcaption INSTRUCTIONS
+
+In the Flexbox unit, we used relative and absolute positioning to overlap the captions on the images.
+
+However, we can also use Grid to do this... and it's much easier.
+
+Start:
+https://codepen.io/jen4web/pen/yLbGmWj?editors=1100
+
+Finish:
+https://codepen.io/jen4web/pen/LYyqPPP?editors=1100
+
+
+BONUS: COMBINING GRID CELLS AND ANIMATION
+
+https://codepen.io/jen4web/pen/MWmRVbL?editors=1100
+
+Here we have two figures occupying the same grid cell.
+
+We can animate the top photo to fade in and out, revealing the photo underneath. 
+

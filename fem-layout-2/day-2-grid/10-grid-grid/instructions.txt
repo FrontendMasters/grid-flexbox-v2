@@ -1,0 +1,29 @@
+10-grid-grid Instructions
+
+PART 10A: DESKTOP ONLY SYSTEM
+
+Starting CodePen: 
+https://codepen.io/jen4web/pen/mdmaZVL
+
+Finished CodePen: 
+https://codepen.io/jen4web/pen/gOWZNwd?editors=1100
+
+Next, we'll create a 4-column grid system.  
+
+Same instructions as before -- the HTML will tell you how many boxes per row. There should be 4 columns, just as we did with Flexbox.
+
+However, this time, you should not need to mark each row individually. Because this is Grid, you should have enough markup here to set this up without adding extra divs.
+
+You may need to add some classes to designate how large each box should be. Consider what your default value is - those boxes may not need a class.
+
+
+PART 10B: RESPONSIVE SYSTEM
+Now we'll add media queries to make our grid system mobile-first.
+
+Starting CodePen (continues from the 10A finished state):
+https://codepen.io/jen4web/pen/abWPemK?editors=1100
+
+Finished CodePen:
+https://codepen.io/jen4web/pen/WNjLVoG?editors=1100
+
+

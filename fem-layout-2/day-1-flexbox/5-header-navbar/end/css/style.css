@@ -1,0 +1,361 @@
+/* colors - see style guide for docs. 
+Clearly there is more you could place in variables, up to you if you want to use them. My answer does not go beyond colors to keep the code easier to read. */
+
+:root {
+    --color1: #001219;
+    --color2: #005f73;
+    --color3: #3d9397;
+    --color4: #94d28d;
+    --color5: #e9d8a6;
+    --color6: #ee9800;
+    --color7: #ca6702;
+    --color8: #bb3e03;
+    --color9: #ae2012;
+    --color10: #9b2226;
+}
+
+
+/* generic site styles */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #DBE5DE;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+section h2 {
+    font-size: 2.5rem;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* header and nav styles */
+
+
+/* stretches completely across the page with the color */
+
+.header {
+    background-color: var(--color5);
+}
+
+
+/* width limited and centered to line up with the rest of the page */
+
+header {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* navigation styling - universal across breakpoints */
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* I cover CSS-only hamburger buttons in my Advanced CSS Layouts course.
+
+Here, because the nav is short, let's try a 4 button layout at the top of the screen.
+*/
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: space-between;
+}
+
+nav li {
+    flex-basis: 48%;
+    margin-bottom: 0.5rem;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav li:first-child a {
+    background-color: transparent;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--color10);
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: var(--color1);
+    color: var(--color5);
+}
+
+
+/* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
+
+Spelled out the individual border styles so border-color could go elsewhere. Styling is the same for all borders except the color. */
+
+figure {
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+
+/* strange open space at the bottom of the box which shows through the transparent overlay - this kills it */
+
+figure img {
+    margin-bottom: -4px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 -150px;
+}
+
+figcaption {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.875rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* make the a have a big clickable area with display: block - the link occupies its containing element, the figcaption */
+
+figcaption a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--color1);
+}
+
+
+/* style is doing double duty, styling border color and hover color. Only one declaration usually applies though.  */
+
+.color2,
+.color2 a:hover {
+    border-color: var(--color2);
+    color: var(--color2);
+}
+
+.color3,
+.color3 a:hover {
+    border-color: var(--color3);
+    color: var(--color3);
+}
+
+.color4,
+.color4 a:hover {
+    border-color: var(--color4);
+    color: var(--color4);
+}
+
+.color6,
+.color6 a:hover {
+    border-color: var(--color6);
+    color: var(--color6);
+}
+
+.color7,
+.color7 a:hover {
+    border-color: var(--color7);
+    color: var(--color7);
+}
+
+.color8,
+.color8 a:hover {
+    border-color: var(--color8);
+    color: var(--color8);
+}
+
+
+/* mission styles */
+
+#mission {
+    margin-bottom: 3rem;
+}
+
+.missiontext {
+    display: block;
+    line-height: 1.7;
+}
+
+.missionimg {
+    max-height: 100px;
+    display: block;
+}
+
+
+/* footer styles */
+
+
+/* color stretches to 100% of the page width */
+
+.footer {
+    background-color: var(--color5);
+}
+
+
+/* width limited and centered to line up with the rest of the page */
+
+footer {
+    padding: 3rem;
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* h4 top margin comes from the browser - it prevents the top of the .social element and the address from aligning */
+
+footer h4 {
+    margin-top: 0;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+/* we want a constant distance between the buttons so they remain clickable at all times. flex-basis doesn't do that - sometimes the buttons are too close together. */
+
+footer li {
+    margin-right: 1rem;
+}
+
+footer address {
+    font-style: normal;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+
+/* turn on flexbox here - prior to this, elements stacked individually as blocks */
+
+@media (min-width: 550px) {
+    section ul,
+    footer {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    section li,
+    .social,
+    address {
+        flex-basis: 49.5%;
+    }
+    /* turn off object position, inherit object-fit: cover */
+    figure img {
+        object-position: 0;
+    }
+    /* display: flow-root clears the float!!!! max-width keeps the text line length shorter */
+    .missiontext {
+        display: flow-root;
+        max-width: 900px;
+    }
+    /* working with an image with a wide width so we have flexibility to set the shape-outside polygon points where we want. The edges of the image limit their placement. In Firefox, you can draw with shape-outside in browser tools */
+    .missionimg {
+        float: left;
+        shape-outside: polygon(35.84% 94.87%, 34.64% 87.05%, 51.64% 4.06%, 55.1% 2.38%);
+        max-height: 211px;
+    }
+    /* remove the top margin assigned above that provided space between .social and address */
+    footer address {
+        margin-top: 0;
+    }
+    /* header/nav layout */
+    header {
+        padding: 3rem;
+    }
+    /* navigation: logo on the top line, the rest of the navigation on the second line */
+    nav ul {
+        justify-content: center;
+        gap: 1.2em;
+    }
+    nav li {
+        flex-basis: auto;
+        margin-bottom: 0;
+    }
+    nav a {
+        color: var(--color1);
+        background-color: transparent;
+        padding: 0;
+    }
+    nav a:hover {
+        color: var(--color2);
+        background-color: transparent;
+    }
+}
+
+@media (min-width: 800px) {
+    section h2 {
+        margin-left: 100px;
+    }
+    section li,
+    .social {
+        flex-basis: 32.5%;
+    }
+    address {
+        flex-basis: 65.5%;
+    }
+    /* navigation - logo in the center */
+    nav ul {
+        justify-content: flex-end;
+    }
+    nav li:first-child {
+        flex-basis: auto;
+        margin: 0 auto;
+        order: 2;
+    }
+    nav li:nth-child(2),
+    nav li:nth-child(3) {
+        order: 1;
+    }
+    nav li:nth-child(4),
+    nav li:nth-child(5) {
+        order: 3;
+    }
+}

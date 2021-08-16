@@ -1,0 +1,28 @@
+12-challenge layout INSTRUCTIONS
+
+There are two challenges to tackle, depending on your time.
+
+
+
+12A - MOSAIC GRID LAYOUT
+
+In the begin folder, you're given some starting HTML and CSS.
+
+Using CSS Grid, lay out the page as you see in the screenshots for desktop and mobile dimensions.
+
+HINTS:
+- You may want to steal some styling from the Flexbox layouts we did yesterday with similar content.
+
+- You may want to consider looking at some of the other work we've done today and apply it to this problem.
+
+- Start with the number of rows and columns needed, then worry about how to fit the images into those spaces.
+
+
+
+
+
+12B - INTEGRATE INTO THE HOME PAGE
+
+I've given you yesterday's final end state of our Flexbox work.
+
+Now try swapping out the "collections" section at the bottom of the home page for the "pop art" mosaic you just created with Grid.

@@ -1,0 +1,56 @@
+Flexbox Properties
+
+A complete version of these tips with image explanations and links is available at CSS Tricks:
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+Parent (Flex Container)
+	display: flex | inline-flex;
+
+	flex-direction: row | row-reverse | column | column-reverse;
+
+	flex-wrap: wrap | nowrap | wrap-reverse;
+
+	flex-flow (shorthand for flex-direction and flex-wrap) (flex-flow: row wrap;)
+
+
+These next two properties work similarly, just on their different axes. 
+
+	justify-content (main axis): flex-start | flex-end | center | space-between | space-around | space-evenly;
+
+	align-items (cross axis): flex-start | flex-end | center | baseline | stretch;
+
+
+Align-content spans multiple line boxes. 
+	
+	align-content: flex-start | flex-end | center | stretch | space-between | space-around | space-evenly;
+
+
+
+Children (Flex Items)
+	order: <integer>;
+
+	flex-grow: <number>; 
+
+	flex-shrink: <number>; 
+
+	flex-basis: <length> | auto;
+
+	flex: shorthand for grow, shrink, and basis (default:  0 1 auto)
+	
+	align-self: overrides alignment set on parent
+
+
+
+Main axis = the axis declared in flex-direction
+Cross axis = the other axis
+
+i.e. if flex-flow: row wrap;  
+
+      main axis = row
+      cross axis = column
+
+if flex-flow: column nowrap;
+
+       main axis = column
+       cross axis = row

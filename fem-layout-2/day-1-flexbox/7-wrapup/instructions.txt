@@ -1,0 +1,83 @@
+7-wrapup Instructions
+
+a. Add a "popular prints" section of the web page, just after "our mission". See the screenshots for how this should look. Captions for the photos include:
+
+- Fork It Up (the fork)
+- Eyeing You (the car)
+- Let's Scoot (the vespa scooter)
+
+b. If you have time, clean up the formatting, comments, spacing and alignment, etc, to make it portfolio-worthy!
+
+
+Added HTML:
+
+
+    <div class="stripe">
+        <section id="popular">
+            <h2>Popular Prints</h2>
+            <ul>
+                <li>
+                    <figure class="color8">
+                        <img src="img/fork-it-up.jpg" alt="Fork on green background" />
+                        <figcaption><a href="#">Fork It Up</a></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="color7">
+                        <img src="img/eyeing-you.jpg" alt="Viewing part of an orange car with an oversized headlight." />
+                        <figcaption><a href="#">Eyeing You</a></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="color4">
+                        <img src="img/lets-scoot.jpg" alt="Vespa scooter parked on a street." />
+                        <figcaption><a href="#">Let's Scoot</a></figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+
+Added CSS:
+section {
+	margin: 0 auto 5rem auto; /* added a bit of margin at the bottom of each section */
+
+}
+figure {
+	height: 100%;
+	max-height: 400px;
+}
+.stripe {
+    background-color: var(--color2);
+    color: white;
+    padding: 1rem 0 2rem 0;
+}
+@media (min-width: 550px){
+	#popular li:last-child {
+		flex-basis: 100%;
+	}
+	#popular li:last-child img {
+		object-position: 0 -350px;
+	}
+}
+@media (min-width: 800px) {
+
+    section li,
+	.social,
+	#popular li:last-child {
+		flex-basis: 32.5%;
+	}
+	#popular li:last-child img {
+         object-position: 0;
+    }
+}
+
+
+
+
+b. If you have time, build the "detail" page for the Eyeing You poster. You'll be able to reuse several elements from the home page, but you'll need to think through some more layout problems as well.
+
+Consider how the page will look with Flexbox and maybe some positioning.
+
+We will re-build the home page and inside page with Grid tomorrow.

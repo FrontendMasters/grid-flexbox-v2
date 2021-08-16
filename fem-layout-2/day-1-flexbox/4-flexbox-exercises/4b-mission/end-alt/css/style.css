@@ -1,0 +1,232 @@
+/* colors - see style guide for docs 
+clearly there is more you could place in variables */
+
+ :root {
+    --color1: #001219;
+    --color2: #005f73;
+    --color3: #3d9397;
+    --color4: #94d28d;
+    --color5: #e9d8a6;
+    --color6: #ee9800;
+    --color7: #ca6702;
+    --color8: #bb3e03;
+    --color9: #ae2012;
+    --color10: #9b2226;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #DBE5DE;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+section h2 {
+    font-size: 2.5rem;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* turn off default browser value */
+
+figure {
+    margin: 0;
+}
+
+
+/* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
+
+Spelled out the individual border styles so border-color could go elsewhere. Styling is the same for all borders except the color. */
+
+#collections figure {
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+
+/* strange open space at the bottom of the box which shows through the transparent overlay - the negative margin kills it.
+    
+    This style will work until approx. 440px, when a giant gap starts appearing at the bottom of the images.
+    */
+
+#collections figure img {
+    margin-bottom: -4px;
+    width: 100%;
+}
+
+
+/* once the big gap at the bottom appears, add these properties */
+
+@media (min-width: 400px) {
+    #collections figure img {
+        object-fit: cover;
+        object-position: 0 -150px;
+    }
+}
+
+#collections figcaption {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.875rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* make the a have a big clickable area with display: block - the link occupies its containing element, the figcaption */
+
+#collections figcaption a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--color1);
+}
+
+
+/* style is doing double duty, styling border color and hover color. Only one declaration usually applies though.  */
+
+.color2,
+.color2 a:hover {
+    border-color: var(--color2);
+    color: var(--color2);
+}
+
+.color3,
+.color3 a:hover {
+    border-color: var(--color3);
+    color: var(--color3);
+}
+
+.color4,
+.color4 a:hover {
+    border-color: var(--color4);
+    color: var(--color4);
+}
+
+.color6,
+.color6 a:hover {
+    border-color: var(--color6);
+    color: var(--color6);
+}
+
+.color7,
+.color7 a:hover {
+    border-color: var(--color7);
+    color: var(--color7);
+}
+
+.color8,
+.color8 a:hover {
+    border-color: var(--color8);
+    color: var(--color8);
+}
+
+
+/* mission styles */
+
+#mission {
+    margin-bottom: 3rem;
+}
+
+.missiontext {
+    display: block;
+    line-height: 1.7;
+}
+
+.missionimg {
+    display: block;
+}
+
+
+/* footer styles */
+
+footer {
+    background-color: var(--color5);
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* turn on flexbox here - prior to this, elements stacked individually as blocks */
+
+@media (min-width: 550px) {
+    #collections ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    #collections li {
+        flex-basis: 49.5%;
+    }
+    /* turn off object position, inherit object-fit: cover */
+    #collections figure img {
+        object-position: 0;
+    }
+    .missiontext {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .missiontext figure {
+        flex-basis: 32.5%;
+        order: 1;
+    }
+    .missiontext img {
+        width: 100%;
+    }
+    .missiontext p {
+        flex-basis: 65.5%;
+        order: 2;
+    }
+}
+
+@media (min-width: 800px) {
+    section h2 {
+        margin-left: 100px;
+    }
+    #collections li {
+        flex-basis: 32.5%;
+    }
+    .missiontext {
+        justify-content: space-between;
+    }
+    #mission .missiontext {
+        flex-basis: 64.5%;
+    }
+    #mission img {
+        flex-basis: 32.5%;
+    }
+}

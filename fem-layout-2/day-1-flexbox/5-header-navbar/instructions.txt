@@ -1,0 +1,134 @@
+5-header-navbar INSTRUCTIONS
+
+Let's move on to laying out the header of the web page. We can do this with one navigation bar that includes the logo. By using Flexbox to lay out the navbar, we can then move the logo around wherever we want it -- far left and inline with the navbar, in the center of the navigation, or on its own line, separate from the rest of the navigation.
+
+HTML added:
+    <div class="header">
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#"><img src="img/header-logo.svg" alt="Wall of Wonder. Click for home." /></a>
+                    </li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Donate</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+
+
+CSS added:
+
+/* stretches completely across the page with the color */
+
+.header {
+    background-color: var(--color5);
+}
+
+
+/* width limited and centered to line up with the rest of the page */
+
+header {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* navigation styling - universal across breakpoints */
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* I cover CSS-only hamburger buttons in my Advanced CSS Layouts course.
+
+Here, because the nav is short, let's try a 4 button layout at the top of the screen.
+*/
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: space-between;
+}
+
+nav li {
+    flex-basis: 48%;
+    margin-bottom: 0.5rem;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav li:first-child a {
+    background-color: transparent;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--color10);
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: var(--color1);
+    color: var(--color5);
+}
+
+@media (min-width: 550px) {
+	header {
+        padding: 3rem;
+    }
+    /* navigation: logo on the top line, the rest of the navigation on the second line */
+    nav ul {
+        justify-content: center;
+        gap: 1.2em;
+    }
+    nav li {
+        flex-basis: auto;
+        margin-bottom: 0;
+    }
+    nav a {
+        color: var(--color1);
+        background-color: transparent;
+        padding: 0;
+    }
+    nav a:hover {
+        color: var(--color2);
+        background-color: transparent;
+    }
+}
+@media (min-width: 800px) {
+	 /* navigation - logo in the center */
+    nav ul {
+        justify-content: flex-end;
+    }
+    nav li:first-child {
+        flex-basis: auto;
+        margin: 0 auto;
+        order: 2;
+    }
+    nav li:nth-child(2),
+    nav li:nth-child(3) {
+        order: 1;
+    }
+    nav li:nth-child(4),
+    nav li:nth-child(5) {
+        order: 3;
+    }
+}

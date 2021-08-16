@@ -1,0 +1,23 @@
+15-final project INSTRUCTIONS
+
+Now that you have a sense of how Flexbox and Grid work, build an inside page for this website.
+
+We've pulled some photos from Pexels from Sharon McCutcheon.
+
+Build an inside page that would match the home page for this website, based on the photos and text we've given you.
+
+a. We've given you the most recent version of the Flexbox/Grid web page we've built over the workshop. You may have elements from here that you want to reuse.
+
+b. Consider how you might lay out the photos and artist information in an attractive way. I've given you some screenshots of my answers, but you're welcome to try something different.
+
+c. If you don't like the images I gave you, or if you want more or different photos, visit Sharon's page at Pexels to download different or additional photos: https://www.pexels.com/@mccutcheon
+
+d. Sketch a quick drawing of what the page might look like before you start coding. Pencil and paper are fine - there's no need to make a Figma drawing unless you really want to!
+
+TECHNICAL CONSIDERATIONS:
+
+- Do you need responsive images? Do you need to resize these images in some way?
+
+- Where should you use Grid and where should you use Flexbox? (Should you use one or the other?) See if you can state why you make your choice, beyond "I like Flexbox better" or "Grid is for layouts."
+
+- What elements will you recycle from the original design, if any?

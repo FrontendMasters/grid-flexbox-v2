@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-facebook-icon">
+      <rect width="40" height="40"/>
+    </clipPath>
+  </defs>
+  <g id="facebook-icon" clip-path="url(#clip-facebook-icon)">
+    <g id="Group_336" data-name="Group 336" transform="translate(-558 -4361)">
+      <circle id="Ellipse_542" data-name="Ellipse 542" cx="20" cy="20" r="20" transform="translate(558 4361)" fill="#005f73"/>
+      <path id="Path_353" data-name="Path 353" d="M246.261,353.416h-2.231v7.991H240.7v-7.991H239.13V350.6H240.7v-1.829a3.958,3.958,0,0,1,.256-1.445,2.807,2.807,0,0,1,1.006-1.335,3.511,3.511,0,0,1,2.085-.585l2.469.018v2.743h-1.792a.709.709,0,0,0-.457.146.77.77,0,0,0-.238.622V350.6h2.523Z" transform="translate(335.158 4027.593)" fill="#f5f5f5"/>
+    </g>
+  </g>
+</svg>

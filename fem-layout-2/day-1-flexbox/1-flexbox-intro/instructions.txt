@@ -1,0 +1,17 @@
+1-flexbox-intro Instructions
+
+
+1A - Layout overview
+Jen will run through a few slides describing layout options in CSS.
+
+
+1B- Flexbox intro to basic properties
+
+Jen will demonstrate the basic Flexbox properties from the flexbox notes.txt document. 
+
+CodePen: https://codepen.io/jen4web/pen/yLbjKWm?editors=1100
+
+Flexbox Properties.txt is a useful document to have nearby when working in Flexbox. It explains which properties apply to parents and children, along with most of their possible values.
+
+You may also refer to CSS Tricks:
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/

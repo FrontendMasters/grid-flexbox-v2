@@ -1,0 +1,49 @@
+13-magazine Instructions
+
+"MAGAZINE" LAYOUTS
+At this point, we've replicated what we can do with Flexbox. Now we can push our Grid layouts a little further with grid area notation and getting creative with our boxes in two dimensions.
+
+Starting CodePen (now with kittens!):
+https://codepen.io/jen4web/pen/MWmxYNQ
+
+Finished CodePen:
+https://codepen.io/jen4web/pen/gOWEPmN?editors=1100
+
+Demonstrates:
+.wrapper {
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, minmax(min-content, max-content));
+}
+.featured {
+  grid-row:  span 2;
+  grid-column:  span 2;
+ }
+
+.featured {
+  grid-row: 1/ span 2;
+  grid-column: 1/ span 2;
+ }
+
+
+AND
+
+.wrapper {
+  grid-template-areas:
+    "featured featured featured featured"
+   " ... ... main main";
+}
+.featured {
+  grid-area: featured;
+  /* on kitten 7 */
+}
+.main {
+  grid-area: main;
+  /* on kitten 10 */
+}
+.middle {
+  grid-row: span 2;
+  grid-column: span 2;
+  /* on kitten 4 */
+}
+
+
