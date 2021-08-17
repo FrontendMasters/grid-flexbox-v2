@@ -18,7 +18,7 @@ module.exports = {
       "css"
     ],
   },
-  pathPrefix: "/css-grid-flexbox-v2", // if you're using GitHub Pages, put the name of the repo here with a leading slash
+  pathPrefix: "/grid-flexbox-v2", // if you're using GitHub Pages, put the name of the repo here with a leading slash
   plugins: [
     {
       resolve: "gatsby-plugin-react-svg",
