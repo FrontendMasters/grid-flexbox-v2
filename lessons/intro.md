@@ -11,7 +11,7 @@ icon: "door-open"
 
 Jen runs through a few slides describing layout options in CSS.
 
-[Slide PDF](https://github.com/FrontendMasters/fem-layout-2/blob/main/day-1-flexbox/1-flexbox-intro/day1.pdf)
+[Slide PDF](https://github.com/FrontendMasters/grid-flexbox-v2/blob/main/day-1-flexbox/1-flexbox-intro/day1.pdf)
 
 ### Flexbox intro to basic properties
 
@@ -19,7 +19,7 @@ Jen demonstrates the basic Flexbox properties as described below.
 
 [Starting CodePen](https://codepen.io/jen4web/pen/yLbjKWm?editors=1100)
 
-[Flexbox Properties.txt](https://github.com/FrontendMasters/fem-layout-2/blob/main/day-1-flexbox/1-flexbox-intro/Flexbox%20Properties.txt) is a useful document to have nearby when working in Flexbox. It explains which properties apply to parents and children, along with most of their possible values.
+[Flexbox Properties.txt](https://github.com/FrontendMasters/grid-flexbox-v2/blob/main/day-1-flexbox/1-flexbox-intro/Flexbox%20Properties.txt) is a useful document to have nearby when working in Flexbox. It explains which properties apply to parents and children, along with most of their possible values.
 
 You may also refer to [CSS Tricks Guide to Flexbox.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 

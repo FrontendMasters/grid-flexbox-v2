@@ -21,4 +21,4 @@ The code, including the code of the site itself and the code in the exercises, a
 Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 
 [fem]: https://frontendmasters.com/
-[course]: https://frontendmasters.github.io/fem-layout-2
+[course]: https://frontendmasters.github.io/grid-flexbox-v2
