@@ -4,7 +4,7 @@ title: "Flexbox Grid System"
 order: "1B"
 section: "Flexbox"
 description: ""
-icon: "door-open"
+icon: "grip-lines"
 ---
 
 ### Part 2A: Desktop Only

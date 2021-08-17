@@ -4,7 +4,7 @@ title: "Flexbox Introduction"
 order: "1A"
 section: "Flexbox"
 description: "Introduction to Flexbox and CSS Grids"
-icon: "door-open"
+icon: "grip-lines"
 ---
 
 ### Layout Options in CSS Overview
