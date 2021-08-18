@@ -27,6 +27,8 @@ const LessonCard = ({ content, title }) => {
       return acc;
     }, []);
 
+  let lessonCount = 1;
+
   return (
     <div className="main-card">
       <h1 className="lesson-title">{title}</h1>
@@ -44,12 +46,15 @@ const LessonCard = ({ content, title }) => {
                 </div>
                 <div className="lesson-text">
                   <h3 className="lesson-section-title">{section[0].section}</h3>
-                  <ol>
-                    {section.map((lesson) => (
-                      <li key={lesson.path}>
-                        <Link to={lesson.path}>{lesson.title}</Link>
-                      </li>
-                    ))}
+                  <ol start={lessonCount}>
+                    {section.map((lesson) => {
+                      lessonCount++;
+                      return (
+                        <li key={lesson.path}>
+                          <Link to={lesson.path}>{lesson.title}</Link>
+                        </li>
+                      )
+                    })}
                   </ol>
                 </div>
                 <div className="details-bg">
