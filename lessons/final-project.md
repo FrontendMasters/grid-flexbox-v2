@@ -1,7 +1,7 @@
 ---
 path: "/final-project"
 title: "Final Project"
-order: "2G"
+order: "2H"
 section: "CSS Grid"
 description: ""
 icon: "th"

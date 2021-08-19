@@ -1,7 +1,7 @@
 ---
 path: "/card-layouts"
 title: "Card Layouts"
-order: "2F"
+order: "2G"
 section: "CSS Grid"
 description: ""
 icon: "th"
