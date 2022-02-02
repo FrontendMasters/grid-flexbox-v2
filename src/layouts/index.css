@@ -39,6 +39,26 @@ a {
   text-transform: uppercase;
 }
 
+.button {
+  border-radius: 10px;
+  background: var(--nav-buttons);
+  color: var(--nav-buttons-text);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.button a {
+  color: white;
+  text-decoration: none;
+}
+
+.button a:hover {
+  text-decoration: underline;
+}
+
 .jumbotron {
   padding: 0;
 }

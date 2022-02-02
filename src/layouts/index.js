@@ -75,6 +75,7 @@ const TemplateWrapper = (props) => {
               {!frontmatter ? null : (
                 <h2>{`${frontmatter.section} – ${frontmatter.title}`}</h2>
               )}
+              <h2 class="button"><a href="https://frontendmasters.com/courses/css-grid-flexbox-v2/">CSS Grid &amp; Flexbox Course Videos</a>&nbsp;▶️&nbsp;</h2>
             </div>
             <div className="content-container">
               <div className="main">{props.children}</div>
