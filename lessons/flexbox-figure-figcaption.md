@@ -1,6 +1,6 @@
 ---
-path: "/figure-figcaption"
-title: "Figure Caption & Figure Caption Elements"
+path: "/flexbox-figure-figcaption"
+title: "Figure Caption & Figure Caption with Flexbox"
 order: "1C"
 section: "Flexbox"
 description: ""
