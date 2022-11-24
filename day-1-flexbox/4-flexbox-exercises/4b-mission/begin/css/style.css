@@ -55,6 +55,10 @@ section ul {
     margin: 0;
 }
 
+#mission {
+    margin-bottom: 3rem;
+}
+
 
 /* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
 
@@ -140,6 +144,10 @@ figcaption a {
     color: var(--color8);
 }
 
+.content article {
+    margin-bottom: 2rem;
+}
+
 
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
@@ -149,20 +157,56 @@ figcaption a {
         flex-flow: row wrap;
         justify-content: space-between;
     }
+
     section li {
         flex-basis: 49.5%;
     }
+
     /* turn off object position, inherit object-fit: cover */
     figure img {
         object-position: 0;
     }
+
+    .content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: 2%;
+        font-size: 1rem;
+        line-height: 1.7rem;
+    }
+
+    .content img {
+        flex-basis: 35%;
+        order: 1;
+    }
+
+    .content article {
+        flex-basis: 58%;
+        order: 2;
+    }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 815px) {
     section h2 {
         margin-left: 100px;
     }
-    section li {
+
+    .content {
+        font-size: 1.3rem;
+    }
+
+    section li,
+    .content img {
         flex-basis: 32.5%;
+    }
+
+    .content img {
+        order: 1;
+    }
+
+    .content article {
+        flex-basis: 65.5%;
+        order: 2;
     }
 }
