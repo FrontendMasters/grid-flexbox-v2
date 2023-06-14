@@ -12,6 +12,7 @@ Clearly there is more you could place in variables, up to you if you want to use
     --color8: #bb3e03;
     --color9: #ae2012;
     --color10: #9b2226;
+    --color11: whitesmoke;
 }
 
 
@@ -44,15 +45,97 @@ section h2 {
     font-size: 2.5rem;
 }
 
+img {
+    width: 100%;
+    display: block;
+    max-height: 300px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+figure {
+    position: relative;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+figcaption {
+    background-color: var(--color11);
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+    opacity: 0.7;
+    font-size: 1.5rem;
+}
+
+figcaption a {
+    display: block;
+    text-decoration: none;
+    color: var(--color1);
+    padding: 1rem;
+}
+
+
+/* border styling */
+
+.one, 
+.one a:hover {
+    border-color: var(--color7);
+    color: var(--color7);
+}
+.two,
+.two a:hover{
+    border-color: var(--color2);
+    color: var(--color2);
+}
+.three,
+.three a:hover {
+    border-color: var(--color6);
+    color: var(--color6);
+}
+.four,
+.four a:hover {
+    border-color: var(--color9);
+    color: var(--color9);
+}
+.five, 
+.five a:hover {
+    border-color: var(--color4);
+    color: var(--color4);
+}
+.six,
+.six a:hover {
+    border-color: var(--color3);
+    color: var(--color3);
+}
+
+
+
 
 /* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
 
 
 /* At this breakpoint, transition to 2 figures per line */
 
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+    li {
+        flex-basis: 48%;
+    }
+}
 
 
 /* At this breakpoint, transition to 3 figures per line */
 
-@media (min-width: 800px) {}
+@media (min-width: 800px) {
+li {
+    flex-basis: 33%;
+}
+}
