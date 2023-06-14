@@ -44,6 +44,10 @@ section h2 {
     font-size: 2.5rem;
 }
 
+p {
+    padding: 1rem;
+}
+
 
 /*****************
 New styles begin here and continue to the end of the page 
@@ -149,6 +153,23 @@ figcaption a {
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
 @media (min-width: 550px) {
+    header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    }
+    .logo {
+        flex-basis: 32.5%;
+        order: 1;
+         
+    }
+    .logo-img {
+        width: 100%;
+    }
+    .mission-statement {
+        flex-basis: 65%;
+        order: 2;
+    }
     section ul {
         display: flex;
         flex-flow: row wrap;
@@ -166,16 +187,14 @@ figcaption a {
 @media (min-width: 800px) {
     header {
     display: flex;
-    flex-flow: column-wrap;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     }
     .logo-img{
         flex-basis: 35%;
         
     }
-    .mission-statement {
-        flex-basis: 65%;
-    }
+    
     section h2 {
         margin-left: 100px;
     }
