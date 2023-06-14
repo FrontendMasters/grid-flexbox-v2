@@ -55,6 +55,11 @@ section ul {
     margin: 0;
 }
 
+div {
+    margin: 0;
+    padding: 0;
+}
+
 
 /* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
 
@@ -159,6 +164,18 @@ figcaption a {
 }
 
 @media (min-width: 800px) {
+    header {
+    display: flex;
+    flex-flow: column-wrap;
+    justify-content: space-evenly;
+    }
+    .logo-img{
+        flex-basis: 35%;
+        
+    }
+    .mission-statement {
+        flex-basis: 65%;
+    }
     section h2 {
         margin-left: 100px;
     }
