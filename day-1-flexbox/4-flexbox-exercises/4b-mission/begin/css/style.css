@@ -168,9 +168,11 @@ figcaption a {
     } 
 
     .logo-img {
-        width: 250px;
+        width: 50%;
         float: left;
-        shape-outside: polygon(0 0, 50% 100%, 100% 0);
+        shape-outside: polygon(0px 0px, 23.29% 105.72%, 51.54% 3px);
+        margin-right: 1rem;
+        padding-right: 1rem;
     }
    .mission-statement {
        /* flex-basis: 65%; */
