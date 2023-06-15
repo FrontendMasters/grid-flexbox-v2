@@ -158,18 +158,23 @@ figcaption a {
     flex-flow: row wrap;
     justify-content: space-between;
     }
-    .logo {
-        flex-basis: 32.5%;
-        order: 1;
+
+   .logo {
+        /* flex-basis: 32.5%;  */
+        margin: 0;
+        padding: 0;
+        
          
-    }
+    } 
+
     .logo-img {
-        width: 100%;
+        width: 250px;
+        float: left;
+        shape-outside: polygon(0 0, 50% 100%, 100% 0);
     }
-    .mission-statement {
-        flex-basis: 65%;
-        order: 2;
-    }
+   .mission-statement {
+       /* flex-basis: 65%; */
+    } 
     section ul {
         display: flex;
         flex-flow: row wrap;
