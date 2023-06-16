@@ -149,6 +149,13 @@ figcaption a {
     color: var(--color8);
 }
 
+/* mobile styling for img */
+
+.logo-img {
+    max-width: 400px;
+    display: block;
+}
+
 
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
@@ -166,13 +173,12 @@ figcaption a {
         
          
     } 
-
     .logo-img {
         width: 50%;
         float: left;
         shape-outside: polygon(0px 0px, 23.29% 105.72%, 51.54% 3px);
         margin-right: 1rem;
-        padding-right: 1rem;
+        padding-right: 2rem;
     }
    .mission-statement {
        /* flex-basis: 65%; */
