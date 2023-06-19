@@ -51,6 +51,10 @@ section ul {
     margin: 0;
 }
 
+h4 {
+    padding: 0;
+    margin: 0;
+}
 
 /* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
 
@@ -153,6 +157,30 @@ figcaption a {
     display: block;
 }
 
+/* footer styling */ 
+
+footer {
+background-color: var(--color5);
+padding-top: 30px;
+}
+
+
+footer ul {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+address {
+    font-weight: bolder;
+}
+
 
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
@@ -179,6 +207,17 @@ figcaption a {
         float: left;
         shape-outside: polygon(35.84% 94.87%, 34.64% 87.05%, 51.64% 4.06%, 55.1% 2.38%);
         max-height: 211px;
+    }
+    footer {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .social {
+        flex-basis: 32.5%;
+        
+    }
+    .address {
+        flex-basis: 65.5%;
     }
 }
 
