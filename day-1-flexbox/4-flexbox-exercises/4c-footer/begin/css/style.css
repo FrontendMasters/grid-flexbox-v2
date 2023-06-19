@@ -167,6 +167,7 @@ footer {
     display: flex;
     flex-flow: column wrap;
     max-width: 1200px;
+    padding-top: 3rem;
 }
 
 footer ul {
@@ -182,6 +183,7 @@ footer a {
 }
 
 address {
+    font-style: normal;
     font-weight: bolder;
 }
 

@@ -50,6 +50,36 @@ section ul {
     margin: 0;
 }
 
+/* header/navbar styles */
+
+nav ul {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    flex-flow: row-wrap;
+}
+
+nav li {
+    display: inline;
+    padding: 0.5rem;
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--color5);
+    padding: 1.5rem;
+}
+
 
 /* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
 
