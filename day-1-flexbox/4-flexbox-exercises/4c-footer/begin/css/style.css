@@ -159,11 +159,15 @@ figcaption a {
 
 /* footer styling */ 
 
-footer {
+.footer {
 background-color: var(--color5);
-padding-top: 30px;
 }
 
+footer {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 1200px;
+}
 
 footer ul {
     display: flex;
@@ -185,12 +189,14 @@ address {
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
 @media (min-width: 550px) {
-    section ul {
+    section ul, footer {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
     }
-    section li {
+    section li, 
+    .social, 
+    .address {
         flex-basis: 49.5%;
     }
     /* turn off object position, inherit object-fit: cover */
@@ -207,17 +213,6 @@ address {
         float: left;
         shape-outside: polygon(35.84% 94.87%, 34.64% 87.05%, 51.64% 4.06%, 55.1% 2.38%);
         max-height: 211px;
-    }
-    footer {
-        display: flex;
-        flex-flow: column wrap;
-    }
-    .social {
-        flex-basis: 32.5%;
-        
-    }
-    .address {
-        flex-basis: 65.5%;
     }
 }
 
