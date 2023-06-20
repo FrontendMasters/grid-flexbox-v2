@@ -92,11 +92,21 @@ nav a {
 
 }
 
+nav a:hover {
+    background-color: var(--color1);
+    color: var(--color5);
+}
+
 /* center the header logo */ 
 
 nav li:nth-child(1) {
     flex-basis: 100%;
     text-align: center;
+    background-color: transparent;
+}
+
+nav li:nth-child(1) a {
+     background-color: transparent;
 }
 
 
