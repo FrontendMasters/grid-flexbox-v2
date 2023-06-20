@@ -294,6 +294,22 @@ footer address {
     footer address {
         margin-top: 0;
     }
+    /* nav styling - full width logo at top, links on a single row underneath*/
+    
+    nav ul {
+        justify-content: center;
+    }
+    nav a {
+        background-color: transparent;
+        color: var(--color1);
+    }
+    nav a:hover {
+        background-color: transparent;
+        color: var(--color10);
+    }
+    nav li {
+        flex-basis: auto;
+    }
 }
 
 @media (min-width: 800px) {
@@ -306,5 +322,18 @@ footer address {
     }
     address {
         flex-basis: 65.5%;
+    }
+    nav li:nth-child(1) {
+        flex-basis: 50%;
+        order: 2;
+        
+    }
+    nav li:nth-child(2), 
+    nav li:nth-child(3) {
+        order: 1;
+    }
+    nav li:nth-child(4), 
+    nav li:nth-child(5) {
+        order: 3;
     }
 }
