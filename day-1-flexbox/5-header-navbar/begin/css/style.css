@@ -50,36 +50,53 @@ section ul {
     margin: 0;
 }
 
-/* header/navbar styles */
-
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav {
+/* header/navbar styles */
+
+.header {
+    background-color: var(--color5);
+}
+
+header {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1200px;
+}
+
+nav ul {
     display: flex;
-    flex-flow: row-wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: space-between;
 }
 
 nav li {
-    display: inline;
-    padding: 0.5rem;
+    flex-basis: 48%;
+    margin-bottom: 0.5rem;
 }
 
-.header a {
+nav a {
     text-decoration: none;
-    color: var(--color1);
+    color: white;
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--color10);
+    border-radius: 5px;
+
 }
 
-.header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--color5);
-    padding: 1.5rem;
+/* center the header logo */ 
+
+nav li:nth-child(1) {
+    flex-basis: 100%;
+    text-align: center;
 }
 
 
