@@ -44,6 +44,10 @@ section h2 {
     font-size: 2.5rem;
 }
 
+p {
+    padding: 1rem;
+}
+
 
 /*****************
 New styles begin here and continue to the end of the page 
@@ -53,6 +57,11 @@ section ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+div {
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -140,10 +149,40 @@ figcaption a {
     color: var(--color8);
 }
 
+/* mobile styling for img */
+
+.logo-img {
+    max-width: 400px;
+    display: block;
+}
+
 
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
 @media (min-width: 550px) {
+    header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    }
+
+   .logo {
+        /* flex-basis: 32.5%;  */
+        margin: 0;
+        padding: 0;
+        
+         
+    } 
+    .logo-img {
+        width: 50%;
+        float: left;
+        shape-outside: polygon(0px 0px, 23.29% 105.72%, 51.54% 3px);
+        margin-right: 1rem;
+        padding-right: 2rem;
+    }
+   .mission-statement {
+       /* flex-basis: 65%; */
+    } 
     section ul {
         display: flex;
         flex-flow: row wrap;
@@ -159,6 +198,16 @@ figcaption a {
 }
 
 @media (min-width: 800px) {
+    header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    }
+    .logo-img{
+        flex-basis: 35%;
+        
+    }
+    
     section h2 {
         margin-left: 100px;
     }

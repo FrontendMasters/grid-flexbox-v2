@@ -241,11 +241,8 @@ footer address {
     section h2 {
         margin-left: 100px;
     }
-    section li,
-    .social {
+    section li {
         flex-basis: 32.5%;
     }
-    address {
-        flex-basis: 65.5%;
-    }
+
 }

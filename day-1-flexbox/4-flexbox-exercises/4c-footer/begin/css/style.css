@@ -51,6 +51,10 @@ section ul {
     margin: 0;
 }
 
+h4 {
+    padding: 0;
+    margin: 0;
+}
 
 /* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
 
@@ -153,16 +157,48 @@ figcaption a {
     display: block;
 }
 
+/* footer styling */ 
+
+.footer {
+background-color: var(--color5);
+}
+
+footer {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 1200px;
+    padding-top: 3rem;
+}
+
+footer ul {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+address {
+    font-style: normal;
+    font-weight: bolder;
+}
+
 
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
 @media (min-width: 550px) {
-    section ul {
+    section ul, footer {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
     }
-    section li {
+    section li, 
+    .social, 
+    .address {
         flex-basis: 49.5%;
     }
     /* turn off object position, inherit object-fit: cover */

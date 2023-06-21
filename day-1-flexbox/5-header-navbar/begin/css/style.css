@@ -50,6 +50,65 @@ section ul {
     margin: 0;
 }
 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* header/navbar styles */
+
+.header {
+    background-color: var(--color5);
+}
+
+header {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1200px;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: space-between;
+}
+
+nav li {
+    flex-basis: 48%;
+    margin-bottom: 0.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--color10);
+    border-radius: 5px;
+
+}
+
+nav a:hover {
+    background-color: var(--color1);
+    color: var(--color5);
+}
+
+/* center the header logo */ 
+
+nav li:nth-child(1) {
+    flex-basis: 100%;
+    text-align: center;
+    background-color: transparent;
+}
+
+nav li:nth-child(1) a {
+     background-color: transparent;
+}
+
 
 /* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
 
@@ -235,6 +294,22 @@ footer address {
     footer address {
         margin-top: 0;
     }
+    /* nav styling - full width logo at top, links on a single row underneath*/
+    
+    nav ul {
+        justify-content: center;
+    }
+    nav a {
+        background-color: transparent;
+        color: var(--color1);
+    }
+    nav a:hover {
+        background-color: transparent;
+        color: var(--color10);
+    }
+    nav li {
+        flex-basis: auto;
+    }
 }
 
 @media (min-width: 800px) {
@@ -247,5 +322,18 @@ footer address {
     }
     address {
         flex-basis: 65.5%;
+    }
+    nav li:nth-child(1) {
+        flex-basis: 50%;
+        order: 2;
+        
+    }
+    nav li:nth-child(2), 
+    nav li:nth-child(3) {
+        order: 1;
+    }
+    nav li:nth-child(4), 
+    nav li:nth-child(5) {
+        order: 3;
     }
 }
