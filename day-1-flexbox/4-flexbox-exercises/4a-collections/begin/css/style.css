@@ -42,17 +42,86 @@ section {
 
 section h2 {
     font-size: 2.5rem;
+    margin-left: 100px;
 }
+
+
+/*Modifications start */
+
+section ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+section li {
+    flex-basis: 32.5%;
+}
+
+figure {
+    position: relative;
+    border: 10px solid;
+    border-radius: 5px;
+    max-height: 400px;
+    overflow: hidden;
+}
+ 
+ figure img {
+    display: block;
+    /* Why is this necessary for flex to understand row? */
+    /* Guessing because default is original px size */
+    width: 100%;
+ }
+ 
+ figcaption {
+     display: flex;
+     position: absolute;
+     box-sizing: border-box;
+     padding: 15px 30px;
+     bottom: 0;
+     width: 100%;
+     background-color: rgba(255,255,255,0.75);
+     opacity: 0.8;
+ }
+ 
+ figcaption a {
+     /*color: var(--color1);*/
+     font-size: 30px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     text-decoration: none;
+     line-height: 0;
+ }
+
 
 
 /* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
 
 
-/* At this breakpoint, transition to 2 figures per line */
+/* Tablet */
 
-@media (min-width: 550px) {}
+@media (max-width: 800px) {
+
+    section h2 {
+        font-size: 2.5rem;
+        margin-left: 0;
+    }
+
+    section li {
+        flex-basis: 49.5%;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 550px) {
+    section li {
+        flex-basis: 100%;
+    }
+}
 
 
-/* At this breakpoint, transition to 3 figures per line */
-
-@media (min-width: 800px) {}
