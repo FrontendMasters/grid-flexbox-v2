@@ -68,7 +68,7 @@ $(document).ready(function() {
     //if getting the root variables failed (thanks Firefox/CORS), enter them manually
     if(cssCustomPropIndex.length == 0) {
         cssCustomPropIndex = [
-            ['--color1', '#001219'],
+            ['--color1', '#001219'], //first element in an array is *always* index 0
             ['--color2', '#005f73'],
             ['--color3', '#3d9397'],
             ['--color4', '#94d28d'],
@@ -80,7 +80,6 @@ $(document).ready(function() {
             ['--color10', '#9b2226']
         ];
     }
-    let n = 0;
 
     $("figure").each(function(){
         i = Math.floor(Math.random()*cssCustomPropIndex.length);

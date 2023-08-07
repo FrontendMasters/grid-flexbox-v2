@@ -49,6 +49,21 @@ section h2 {
 New styles begin here and continue to the end of the page 
 ****************/
 
+#mission h2 {
+    display: block;
+    width: 100%;
+}
+
+#missionLogo {
+    display: block;
+    order: -1;
+    border: 0;
+}
+
+#missionLogo img {
+    display: block;
+}
+
 section ul {
     list-style-type: none;
     padding: 0;
@@ -74,7 +89,7 @@ figure {
 
 /* strange open space at the bottom of the box which shows through the transparent overlay - this kills it */
 
-figure img {
+#collections figure img {
     margin-bottom: -4px;
     width: 100%;
     object-fit: cover;
@@ -144,6 +159,22 @@ figcaption a {
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
 @media (min-width: 550px) {
+    #missionContent {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        column-gap: 1rem;
+    }
+    #missionText {
+        flex-basis: 65.5%;
+        line-height: 1.75;
+    }
+    #missionLogo {
+        flex-basis: 32.5%;
+    }
+    #missionLogo img {
+        width: 100%;
+    }
     section ul {
         display: flex;
         flex-flow: row wrap;
@@ -153,7 +184,7 @@ figcaption a {
         flex-basis: 49.5%;
     }
     /* turn off object position, inherit object-fit: cover */
-    figure img {
+    #collections figure img {
         object-position: 0;
     }
 }
