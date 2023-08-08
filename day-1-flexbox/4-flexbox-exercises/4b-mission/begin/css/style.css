@@ -54,14 +54,9 @@ New styles begin here and continue to the end of the page
     width: 100%;
 }
 
-#missionLogo {
+.missionimg {
     display: block;
-    order: -1;
-    border: 0;
-}
-
-#missionLogo img {
-    display: block;
+    max-height: 100px;
 }
 
 section ul {
@@ -160,21 +155,20 @@ figcaption a {
 
 @media (min-width: 550px) {
     #missionContent {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        column-gap: 1rem;
+        display: flow-root;
+        max-width: 1080px;
     }
     #missionText {
-        flex-basis: 65.5%;
         line-height: 1.75;
     }
-    #missionLogo {
-        flex-basis: 32.5%;
+
+    .missionimg {
+        float: left;
+        clear: both;
+        max-height: 211px;
+        shape-outside: polygon(35.78% 212px, 18.43% 100.97%, -11px 0.14%, 54.57% 0.7%);
     }
-    #missionLogo img {
-        width: 100%;
-    }
+    
     section ul {
         display: flex;
         flex-flow: row wrap;
